@@ -12,6 +12,19 @@ namespace twozerofoureight
         protected int[,] board;
         protected Random rand;
 
+        public int Updatescore()
+        {
+            int score = 0;
+            for(int x = 0; x < 4; x++)
+            {
+                for(int y = 0; y < 4; y++)
+                {
+                    score = score + board[x, y];
+                }
+            }
+            return score;
+        }
+
         public TwoZeroFourEightModel() : this(4)
         {
             // default board size is 4 
